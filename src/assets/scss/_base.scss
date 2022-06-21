@@ -7,7 +7,7 @@
 @import "./components/components.footer";
 @import "./components/components.card";
 @import "./components/components.nutrition";
-
+@import "./components/components.carousel";
 
 //general styles
 
@@ -27,66 +27,56 @@ body {
   @include flexCenter(row);
   transform: scale(0.4);
   position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   .evolving-potato {
     justify-self: right;
-    
+
     width: 50%;
   }
 
   .pringles {
     justify-self: left;
     width: 50%;
-      
   }
 
-  .evolving-potato-divider{
+  .evolving-potato-divider {
     height: 100%;
     border-left: solid $darkText2 5px;
-
   }
-  
 }
 
-.mash{
+.mash {
   position: absolute;
   bottom: 0;
   left: 0;
   transform: translate(-50%, 0);
- 
 }
 
-.wedges{
+.wedges {
   position: absolute;
-  bottom:0;
-  right:0;
+  bottom: 0;
+  right: 0;
   transform: translate(50%, 0) scale(2);
-  
 }
-
 
 .potato-line-wrapper {
   width: 100%;
   @include flexCenter(row);
-  
+
   position: relative;
   z-index: 999;
   justify-content: space-evenly;
 
-  @media(max-width:460px){
+  @media (max-width: 460px) {
     flex-wrap: wrap;
   }
 
-
-
-  .potato-line-icon{
+  .potato-line-icon {
     margin: 0 20px;
-
-  
   }
 
   .potato-line {
@@ -97,9 +87,7 @@ body {
   .potato-line-sm {
     width: 10%;
     border-top: solid rgb(175, 173, 173) 1px;
-
   }
-
 }
 
 .main-content {
@@ -117,32 +105,29 @@ body {
     width: 100%;
     overflow: hidden;
 
-  
-      .content-wrapper {
-        @include flexCenter(column);
-        
-        margin: 0 auto;
-      }
+    .content-wrapper {
+      @include flexCenter(column);
 
-      .three-potatoes {
-        
-        transform: scale(0.6);
-      }
+      margin: 0 auto;
+    }
 
-      h2 {
-        font-size: 2.5rem;
-        font-weight: 400;
-        text-align: center;
-        margin-bottom: 0.75rem;
-      }
+    .three-potatoes {
+      transform: scale(0.6);
+    }
 
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 100;
-        text-align: center;
-        margin-top: 0;
-      }
-    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 100;
+      text-align: center;
+      margin-top: 0;
+    }
 
     .content-wrapper--2 {
       position: relative;
@@ -212,14 +197,12 @@ body {
       }
 
       .potato-mid-3 {
-        
         transform: scale(2.5);
         z-index: 800;
 
-        @media(max-width: 960px){
+        @media (max-width: 960px) {
           transform: scale(1.5);
         }
-        
       }
     }
 
@@ -259,10 +242,10 @@ body {
       position: relative;
       z-index: 5;
     }
-    &.section--5{
+    &.section--5 {
       @include background($accentColor4);
     }
-    &.section--6{
+    &.section--6 {
       @include background($accentColor5);
     }
   }
