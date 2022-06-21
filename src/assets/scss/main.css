@@ -558,6 +558,11 @@ body {
   height: 600px;
 }
 
+.card-wrapper .card .potato-lite-img {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
 .card-wrapper .card:nth-child(odd) {
   border: none;
 }

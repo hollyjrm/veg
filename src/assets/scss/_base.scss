@@ -8,6 +8,9 @@
 @import "./components/components.card";
 @import "./components/components.nutrition";
 
+
+//general styles
+
 body {
   min-width: 320px;
 }
@@ -19,8 +22,6 @@ body {
 .width-70 {
   width: 70%;
 }
-
-
 
 .evolved-potato-wrapper {
   @include flexCenter(row);
@@ -113,7 +114,6 @@ body {
 
   .section {
     min-height: 100vh;
-    // min-height: 1200px;
     width: 100%;
     overflow: hidden;
 
@@ -128,10 +128,6 @@ body {
         
         transform: scale(0.6);
       }
-
-      // img {
-      //   width: 70%;
-      // }
 
       h2 {
         font-size: 2.5rem;
@@ -203,11 +199,9 @@ body {
 
       .sack-blur-left {
         filter: blur(4px);
-        // transform: scale(3) translate(0, 20%);
         bottom: 0;
         left: 0;
         z-index: 1;
-       
         transform: scale(3) translate(0, 20%);
       }
 
@@ -217,24 +211,15 @@ body {
         z-index: 1;
       }
 
-      // .potato-mid-3-wrapper {
-      //   position: relative;
-      //   z-index: 999;
-      
-
-      // }
       .potato-mid-3 {
         
         transform: scale(2.5);
         z-index: 800;
-        // width: 100%;
-
 
         @media(max-width: 960px){
           transform: scale(1.5);
         }
         
-       
       }
     }
 
@@ -268,7 +253,6 @@ body {
     &.section--3 {
       @include background($accentColor2);
       background: radial-gradient($accentColor2, $accentGradient2);
-      // overflow: visible;
     }
     &.section--4 {
       @include background($accentColor3);
