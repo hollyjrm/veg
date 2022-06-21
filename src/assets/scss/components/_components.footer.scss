@@ -1,0 +1,55 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    padding: 0 10rem;
+
+    div{
+        width: 50%;
+        text-align: left;
+        color: $darkText;
+    }
+
+    ul {
+        width: 50%;
+        padding:0;
+        list-style: none;
+        @include flexCenter(row);
+
+        li{
+            margin: 0 10px;
+
+            a{
+                text-decoration: none;
+                color: $darkText;
+            }
+        }
+    }
+
+    @media (max-width: 1075px) {
+
+        
+            height: 20rem;
+            padding: 0 2rem;
+            flex-direction: column-reverse;
+
+        
+        ul {
+          @include flexCenter(column);
+          align-items: flex-start;
+          width: 100%;
+          
+          li{
+              margin: 10px 0;
+          }
+        }
+
+        div{
+            width: 100%;
+            border-top: 1px solid grey;
+        }
+      }
+
+
+}

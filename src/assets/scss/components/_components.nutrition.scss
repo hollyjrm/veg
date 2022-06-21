@@ -1,0 +1,156 @@
+.nutrition-middle-diagram {
+    @include flexCenter(row);
+}
+
+.pointer-wrapper {
+  position: absolute;
+  z-index: 1000;
+  // display: inline-block;
+
+  &.pointer-wrapper-1 {
+    left: 35%;
+  }
+  &.pointer-wrapper-2 {
+    left: 40%;
+    bottom: 60%;
+  }
+  &.pointer-wrapper-3 {
+    left: 50%;
+    bottom: 55%;
+  }
+  &.pointer-wrapper-4 {
+    left: 60%;
+    bottom: 55%;
+  }
+}
+.nutrition-pointer-line {
+  height: 300px;
+  border-left: dashed #fff 2px;
+  position: absolute;
+  z-index: 1000;
+
+  &::before {
+    content: "";
+    border-bottom: solid rgb(255, 255, 255) 1px;
+    width: 5rem;
+    height: 1px;
+    position: absolute;
+    z-index: 9999;
+    bottom: 0;
+    color: $mainText1;
+    font-size: 3rem;
+    font-weight: 200;
+
+    @media(max-width: 768px){
+        font-size: 2rem;
+    }
+  }
+
+  &.line-1 {
+    transform: translate(-2rem, 2rem) skew(-20deg);
+
+    &::before {
+      content: "110";
+      transform: skew(20deg);
+    }
+
+    &::after {
+      content: "calories";
+      bottom: -70px;
+      left: 20px;
+      transform: skew(20deg);
+      @include nutritionText();
+    }
+  }
+
+  &.line-2 {
+    transform: translate(-0.25rem, 2rem) skew(-8deg);
+    height: 400px;
+
+    &::before {
+      content: "26g";
+      transform: skew(8deg);
+    }
+
+    &::after {
+      content: "carbohydrate";
+      bottom: -80px;
+      left: 0px;
+      transform: skew(8deg);
+      @include nutritionText();
+    }
+  }
+  &.line-3 {
+    transform: translate(3.2rem, 1.8rem) skew(8deg);
+    height: 400px;
+
+    &::before {
+      content: "3g";
+      transform: skew(-8deg);
+    }
+
+    &::after {
+      content: "protein";
+      bottom: -80px;
+      left: 0px;
+      transform: skew(-8deg);
+      @include nutritionText();
+    }
+  }
+  &.line-4 {
+    transform: translate(6.2rem, 2rem) skew(20deg);
+    height: 400px;
+
+    @media(max-width:960px){
+        height: 150px;
+        transform: translate(2.5rem, 2rem) skew(20deg);
+    }
+
+    &::before {
+      content: "0g";
+      transform: skew(-20deg);
+
+     
+    }
+
+    &::after {
+      content: "fat";
+      bottom: -80px;
+      left: 0px;
+      transform: skew(-20deg);
+      @include nutritionText();
+    }
+  }
+}
+
+.nutrition-pointer {
+  border-radius: 50%;
+  border: white solid 1px;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: inset 0 2px 8px 0 rgba(255, 255, 255, 0.397);
+  @include flexCenter(row);
+
+  &::before {
+    content: "\2022";
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 1100;
+  }
+}
+
+@media (max-width:960px){
+    .nutrition-pointer {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .line-1{
+        height: 200px;
+    }
+   
+  
+}
