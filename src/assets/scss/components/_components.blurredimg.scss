@@ -30,16 +30,15 @@
       }
 
 
-      .sack-blur-left {
-        filter: blur(4px);
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        transform: scale(3) translate(0, 20%);
-      }
+      // .sack-blur-left {
+      //   filter: blur(4px);
+      //   bottom: 0;
+      //   left: 0;
+      //   transform: scale(2) translate(0, 20%);
+      // }
 
-      .sack-blur-right {
-        filter: blur(4px);
-        transform: scale(3) translate(0, 20%);
-        z-index: 1;
-      }
+      // .sack-blur-right {
+      //   filter: blur(4px);
+      //   transform: scale(2) translate(0, 20%);
+       
+      // }

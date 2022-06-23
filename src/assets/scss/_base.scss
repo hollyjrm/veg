@@ -8,12 +8,18 @@
 @import "./components/components.card";
 @import "./components/components.nutrition";
 @import "./components/components.carousel";
-@import "./components/componenets.blurredimg";
+@import "./components/components.blurredimg";
 
 //general styles
 
 body {
   min-width: 320px;
+}
+
+.flex{
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 3em;
 }
 
 .pos-rel {
@@ -26,6 +32,44 @@ body {
 
 .potato-centre-2{
   transform: scale(2);
+}
+
+.indicator-container {
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: -110px;
+    color: white;
+    font-weight: 100;
+  }
+
+  &.indicator-container-1{
+    &:after{
+      content: "calories";
+      left: -50px;
+    }
+  }
+
+  &.indicator-container-2{
+    &:after{
+      content: "carbohydrate";
+      left: 15px;
+    }
+  }
+
+  &.indicator-container-3{
+    &:after{
+      content: "protein";
+      right: 20px;
+    }
+  }
+
+  &.indicator-container-4{
+    &:after{
+      content: "fat";
+      right: -35px;
+    }
+  }
 }
 
 .evolved-potato-wrapper {
@@ -168,6 +212,7 @@ body {
         }
       }
     }
+
 
     .content-wrapper--4 {
       h2 {

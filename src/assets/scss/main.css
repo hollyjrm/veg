@@ -558,6 +558,10 @@ body {
   height: 600px;
 }
 
+.card-wrapper .card p {
+  text-align: center;
+}
+
 .card-wrapper .card .potato-lite-img {
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
@@ -601,11 +605,64 @@ body {
   }
   .card-wrapper .card {
     border: none;
+    border-bottom: solid grey 1px;
+    border-top: solid grey 1px;
     height: auto;
   }
 }
 
-.nutrition-middle-diagram {
+.sack-test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, 60%) scale(0.8);
+          transform: translate(-50%, 60%) scale(0.8);
+  z-index: 700;
+}
+
+.sack-test-right {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(100%, 60%) scale(0.8);
+          transform: translate(100%, 60%) scale(0.8);
+}
+
+.nutrition-potato-container {
+  position: relative;
+  z-index: 9999;
+}
+
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+  height: 15vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(0, -30%);
+          transform: translate(0, -30%);
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.indicator {
+  border-left: dashed white 2px;
+  height: 100%;
+  position: absolute;
+}
+
+.indicator:before {
+  content: "\2022";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,206 +672,82 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-}
-
-.pointer-wrapper {
+  color: white;
+  -webkit-box-shadow: inset 0 2px 8px 0 rgba(255, 255, 255, 0.397);
+          box-shadow: inset 0 2px 8px 0 rgba(255, 255, 255, 0.397);
+  border-radius: 50%;
+  border: solid white 1px;
+  height: 2em;
+  width: 2em;
   position: absolute;
-  z-index: 1000;
 }
 
-.pointer-wrapper.pointer-wrapper-1 {
-  left: 35%;
-}
-
-.pointer-wrapper.pointer-wrapper-2 {
-  left: 40%;
-  bottom: 60%;
-}
-
-.pointer-wrapper.pointer-wrapper-3 {
-  left: 50%;
-  bottom: 55%;
-}
-
-.pointer-wrapper.pointer-wrapper-4 {
-  left: 60%;
-  bottom: 55%;
-}
-
-.nutrition-pointer-line {
-  height: 300px;
-  border-left: dashed #fff 2px;
-  position: absolute;
-  z-index: 1000;
-}
-
-.nutrition-pointer-line::before {
+.indicator:after {
   content: "";
-  border-bottom: solid white 1px;
-  width: 5rem;
-  height: 1px;
   position: absolute;
-  z-index: 9999;
-  bottom: 0;
-  color: #fff;
-  font-size: 3rem;
-  font-weight: 200;
+  bottom: -20px;
+  border-top: white solid 1px;
+  color: white;
 }
 
-@media (max-width: 768px) {
-  .nutrition-pointer-line::before {
-    font-size: 2rem;
-  }
+.indicator.indicator-1 {
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
 }
 
-.nutrition-pointer-line.line-1 {
-  -webkit-transform: translate(-2rem, 2rem) skew(-20deg);
-          transform: translate(-2rem, 2rem) skew(-20deg);
+.indicator.indicator-1:before {
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+  right: -20px;
+  top: -32px;
 }
 
-.nutrition-pointer-line.line-1::before {
+.indicator.indicator-1:after {
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
   content: "110";
-  -webkit-transform: skew(20deg);
-          transform: skew(20deg);
+  left: -10px;
+  text-align: center;
 }
 
-.nutrition-pointer-line.line-1::after {
-  content: "calories";
-  bottom: -70px;
-  left: 20px;
-  -webkit-transform: skew(20deg);
-          transform: skew(20deg);
-  position: absolute;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 100;
+.indicator.indicator-2:before {
+  left: 55px;
+  top: -32px;
 }
 
-.nutrition-pointer-line.line-2 {
-  -webkit-transform: translate(-0.25rem, 2rem) skew(-8deg);
-          transform: translate(-0.25rem, 2rem) skew(-8deg);
-  height: 400px;
-}
-
-.nutrition-pointer-line.line-2::before {
+.indicator.indicator-2:after {
   content: "26g";
-  -webkit-transform: skew(8deg);
-          transform: skew(8deg);
+  left: 50px;
+  text-align: center;
 }
 
-.nutrition-pointer-line.line-2::after {
-  content: "carbohydrate";
-  bottom: -80px;
-  left: 0px;
-  -webkit-transform: skew(8deg);
-          transform: skew(8deg);
-  position: absolute;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 100;
+.indicator.indicator-3:before {
+  right: 55px;
+  top: -32px;
 }
 
-.nutrition-pointer-line.line-3 {
-  -webkit-transform: translate(3.2rem, 1.8rem) skew(8deg);
-          transform: translate(3.2rem, 1.8rem) skew(8deg);
-  height: 400px;
-}
-
-.nutrition-pointer-line.line-3::before {
+.indicator.indicator-3:after {
   content: "3g";
-  -webkit-transform: skew(-8deg);
-          transform: skew(-8deg);
+  right: 55px;
 }
 
-.nutrition-pointer-line.line-3::after {
-  content: "protein";
-  bottom: -80px;
-  left: 0px;
-  -webkit-transform: skew(-8deg);
-          transform: skew(-8deg);
-  position: absolute;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 100;
+.indicator.indicator-4 {
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
 }
 
-.nutrition-pointer-line.line-4 {
-  -webkit-transform: translate(6.2rem, 2rem) skew(20deg);
-          transform: translate(6.2rem, 2rem) skew(20deg);
-  height: 400px;
+.indicator.indicator-4:before {
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  right: -20px;
+  top: -32px;
 }
 
-@media (max-width: 960px) {
-  .nutrition-pointer-line.line-4 {
-    height: 150px;
-    -webkit-transform: translate(2.5rem, 2rem) skew(20deg);
-            transform: translate(2.5rem, 2rem) skew(20deg);
-  }
-}
-
-.nutrition-pointer-line.line-4::before {
+.indicator.indicator-4:after {
   content: "0g";
   -webkit-transform: skew(-20deg);
           transform: skew(-20deg);
-}
-
-.nutrition-pointer-line.line-4::after {
-  content: "fat";
-  bottom: -80px;
-  left: 0px;
-  -webkit-transform: skew(-20deg);
-          transform: skew(-20deg);
-  position: absolute;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 100;
-}
-
-.nutrition-pointer {
-  border-radius: 50%;
-  border: white solid 1px;
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-  z-index: 1000;
-  -webkit-box-shadow: inset 0 2px 8px 0 rgba(255, 255, 255, 0.397);
-          box-shadow: inset 0 2px 8px 0 rgba(255, 255, 255, 0.397);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.nutrition-pointer::before {
-  content: "\2022";
-  color: #fff;
-  font-size: 2rem;
-  position: absolute;
-  z-index: 1100;
-}
-
-@media (max-width: 960px) {
-  .nutrition-pointer {
-    width: 2rem;
-    height: 2rem;
-  }
-  .line-1 {
-    height: 200px;
-  }
+  right: -10px;
 }
 
 .carousel {
@@ -892,6 +825,25 @@ body {
 
 .carousel-testimonial .testimonial-text {
   text-align: center;
+  border-bottom: solid black 1px;
+  width: 70%;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.carousel-testimonial .testimonial-text:after {
+  content: '\0020';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .top-left-potato-blur {
@@ -932,26 +884,16 @@ body {
   z-index: 1;
 }
 
-.sack-blur-left {
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  -webkit-transform: scale(3) translate(0, 20%);
-          transform: scale(3) translate(0, 20%);
-}
-
-.sack-blur-right {
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-  -webkit-transform: scale(3) translate(0, 20%);
-          transform: scale(3) translate(0, 20%);
-  z-index: 1;
-}
-
 body {
   min-width: 320px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 3em;
 }
 
 .pos-rel {
@@ -965,6 +907,34 @@ body {
 .potato-centre-2 {
   -webkit-transform: scale(2);
           transform: scale(2);
+}
+
+.indicator-container::after {
+  content: "";
+  position: absolute;
+  bottom: -110px;
+  color: white;
+  font-weight: 100;
+}
+
+.indicator-container.indicator-container-1:after {
+  content: "calories";
+  left: -50px;
+}
+
+.indicator-container.indicator-container-2:after {
+  content: "carbohydrate";
+  left: 15px;
+}
+
+.indicator-container.indicator-container-3:after {
+  content: "protein";
+  right: 20px;
+}
+
+.indicator-container.indicator-container-4:after {
+  content: "fat";
+  right: -35px;
 }
 
 .evolved-potato-wrapper {
