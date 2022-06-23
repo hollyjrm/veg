@@ -12,7 +12,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/scss/main.css" />
-    <script src="./assets/js/main.js"></script>
   </head>
   <body>
     <main class="main-content">
@@ -149,66 +148,34 @@
             The majority of carbohydrates in potatoes are complex<br />
             carbohydrates, your body's main energy source.
           </h3>
-
-          <!-- <div class="image-wrapper">
-            <img class="sack-blur-left" src="images/sack.png" alt="" />
-
-            <div class="nutrition-middle-diagram">
-              <img class="potato-mid-3" src="images/potato-mid-3.png" alt="" />
-
-              <div class="all-pointers">
-                <div class="pointer-wrapper pointer-wrapper-1">
-                  <div class="nutrition-pointer nutrition-pointer-1"></div>
-                  <div class="nutrition-pointer-line line-1"></div>
+          <div class="flex">
+            <img class="sack-left width-70" src="images/sack.png" alt="" />
+            <div class="nutrition-potato-container">
+              <img
+                class="nutrition-potato"
+                src="images/potato-mid-3.png"
+                alt=""
+              />
+              <div class="indicators">
+                <div class="indicator-container indicator-container-1">
+                  <div class="indicator indicator-1"></div>
                 </div>
 
-                <div class="pointer-wrapper pointer-wrapper-2">
-                  <div class="nutrition-pointer nutrition-pointer-2"></div>
-                  <div class="nutrition-pointer-line line-2"></div>
+                <div class="indicator-container indicator-container-2">
+                  <div class="indicator indicator-2"></div>
+                </div>
+                <div class="indicator-container indicator-container-3">
+                  <div class="indicator indicator-3"></div>
                 </div>
 
-                <div class="pointer-wrapper pointer-wrapper-3">
-                  <div class="nutrition-pointer nutrition-pointer-3"></div>
-                  <div class="nutrition-pointer-line line-3"></div>
-                </div>
-
-                <div class="pointer-wrapper pointer-wrapper-4">
-                  <div class="nutrition-pointer nutrition-pointer-4"></div>
-                  <div class="nutrition-pointer-line line-4"></div>
+                <div class="indicator-container indicator-container-4">
+                  <div class="indicator indicator-4"></div>
                 </div>
               </div>
             </div>
 
-            <img class="sack-blur-right" src="images/sack.png" alt="" />
-          </div> -->
-          <!--NEW NUTRITION FACTS SECTION-->
-          <div class="flex">
-          <img class="sack-test  sack-blur-left width-70" src="images/sack.png" alt="" />
-          <div class="nutrition-potato-container">
-            <img class="nutrition-potato" src="images/potato-mid-3.png" alt="" />
-            <div class="indicators">
-            
-            
-              <div class="indicator-container indicator-container-1">
-              <div class="indicator indicator-1"></div>
-            </div>
-           
-            <div class="indicator-container indicator-container-2">
-              <div class="indicator indicator-2"></div>
-            </div>
-            <div class="indicator-container indicator-container-3">
-              <div class="indicator indicator-3"></div>
-            </div>
-
-            <div class="indicator-container indicator-container-4">
-              <div class="indicator indicator-4"></div>
-            </div>
-            </div>
+            <img class="sack-right width-70" src="images/sack.png" alt="" />
           </div>
-          
-          <img class="sack-test-right sack-blur-right width-70" src="images/sack.png" alt="" />
-        </div>
-
         </div>
       </section>
       <section id="nutrition" class="section section--4">
@@ -247,7 +214,7 @@
           <h2>100% Customer satisfaction!</h2>
 
           <div class="carousel">
-            <button class="carousel-button carousel-button-left">
+            <button class="carousel-button carousel-button-left is-hidden">
               <img
                 src="images/carousel-button-left.svg"
                 height="50px"
@@ -257,7 +224,7 @@
             </button>
             <div class="carousel-track-container">
               <ul class="carousel-track">
-                <li class="carousel-slide">
+                <li class="carousel-slide current-slide">
                   <div class="carousel-testimonial">
                     <p class="testimonial-text">
                       " I was skeptic at first, but when I tried the Potato for
@@ -268,16 +235,16 @@
                   </div>
                 </li>
                 <li class="carousel-slide">
-                  <!-- <img
+                  <img
                     src="https://images.unsplash.com/photo-1526228653958-2fda2c7479eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
                     alt=""
-                  /> -->
+                  />
                 </li>
                 <li class="carousel-slide">
-                  <!-- <img
+                  <img
                     src="https://images.unsplash.com/photo-1655212874354-5dace1fdc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt=""
-                  /> -->
+                  />
                 </li>
               </ul>
             </div>
@@ -367,5 +334,6 @@
         <li><a href="#">Free Potato</a></li>
       </ul>
     </footer>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

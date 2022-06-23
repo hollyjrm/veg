@@ -16,7 +16,7 @@ body {
   min-width: 320px;
 }
 
-.flex{
+.flex {
   display: flex;
   margin-top: 2rem;
   margin-bottom: 3em;
@@ -30,12 +30,15 @@ body {
   width: 70%;
 }
 
-.potato-centre-2{
+.potato-centre-2 {
   transform: scale(2);
+
+  -webkit-filter: drop-shadow(5px 5px 5px #9c9b9b);
+  filter: drop-shadow(5px 5px 5px #929191);
 }
 
 .indicator-container {
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     bottom: -110px;
@@ -43,29 +46,29 @@ body {
     font-weight: 100;
   }
 
-  &.indicator-container-1{
-    &:after{
+  &.indicator-container-1 {
+    &:after {
       content: "calories";
       left: -50px;
     }
   }
 
-  &.indicator-container-2{
-    &:after{
+  &.indicator-container-2 {
+    &:after {
       content: "carbohydrate";
       left: 15px;
     }
   }
 
-  &.indicator-container-3{
-    &:after{
+  &.indicator-container-3 {
+    &:after {
       content: "protein";
       right: 20px;
     }
   }
 
-  &.indicator-container-4{
-    &:after{
+  &.indicator-container-4 {
+    &:after {
       content: "fat";
       right: -35px;
     }
@@ -189,7 +192,6 @@ body {
       h3 {
         @include infoText($darkText);
       }
-
     }
 
     .content-wrapper--3 {
@@ -212,7 +214,6 @@ body {
         }
       }
     }
-
 
     .content-wrapper--4 {
       h2 {
