@@ -1,5 +1,6 @@
 .nutrition-middle-diagram {
     @include flexCenter(row);
+    position: relative;
 }
 
 .pointer-wrapper {

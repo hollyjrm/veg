@@ -8,6 +8,7 @@
 @import "./components/components.card";
 @import "./components/components.nutrition";
 @import "./components/components.carousel";
+@import "./components/componenets.blurredimg";
 
 //general styles
 
@@ -23,6 +24,10 @@ body {
   width: 70%;
 }
 
+.potato-centre-2{
+  transform: scale(2);
+}
+
 .evolved-potato-wrapper {
   @include flexCenter(row);
   transform: scale(0.4);
@@ -34,7 +39,6 @@ body {
 
   .evolving-potato {
     justify-self: right;
-
     width: 50%;
   }
 
@@ -98,6 +102,8 @@ body {
     @include flexCenter(row);
     position: relative;
     z-index: 2;
+    gap: 2em;
+    height: 500px;
   }
 
   .section {
@@ -140,35 +146,6 @@ body {
         @include infoText($darkText);
       }
 
-      .top-left-potato-blur {
-        filter: blur(10px);
-        transform: skew(-0.06turn, 18deg) scale(0.7) translate(-90%, 2ex);
-        position: absolute;
-        z-index: 1;
-      }
-
-      .top-mid-potato-blur {
-        filter: blur(15px);
-        transform: scale(0.6) translate(100%, -80%);
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-      }
-
-      .bottom-left-potato-blur {
-        filter: blur(35px);
-        transform: scale(0.4) translate(-150%, 50%);
-        position: absolute;
-        z-index: 1;
-      }
-
-      .bottom-right-potato-blur {
-        filter: blur(35px);
-        transform: scale(0.7) translate(100%, 50%);
-        position: absolute;
-        z-index: 1;
-      }
     }
 
     .content-wrapper--3 {
@@ -180,20 +157,6 @@ body {
 
       h3 {
         @include infoText($mainText1);
-      }
-
-      .sack-blur-left {
-        filter: blur(4px);
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        transform: scale(3) translate(0, 20%);
-      }
-
-      .sack-blur-right {
-        filter: blur(4px);
-        transform: scale(3) translate(0, 20%);
-        z-index: 1;
       }
 
       .potato-mid-3 {
@@ -236,6 +199,7 @@ body {
     &.section--3 {
       @include background($accentColor2);
       background: radial-gradient($accentColor2, $accentGradient2);
+      // overflow: visible;
     }
     &.section--4 {
       @include background($accentColor3);
