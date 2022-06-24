@@ -22,6 +22,10 @@
   
       .three-potatoes {
         transform: scale(0.6);
+
+        @media (max-width: 476px){
+            transform: scale(0.4);
+        }
       }
   
       h2 {
@@ -91,6 +95,12 @@
       }
       &.section--2 {
         @include background($accentColor6);
+
+        .sm-potato-2 {
+            @media (max-width: 481px){
+                transform: scale(0.5);
+            }
+        }
       }
       &.section--3 {
         @include background($accentColor2);
