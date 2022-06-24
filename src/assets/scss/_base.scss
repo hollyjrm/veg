@@ -12,35 +12,5 @@
 @import "./components/components.blurredimg";
 @import "./components/components.potato-line";
 @import "./components/components.evolving-potato";
-
-//general styles
-
-body {
-  min-width: 320px;
-}
-
-.flex {
-  display: flex;
-  margin-top: 2rem;
-  margin-bottom: 3em;
-}
-
-.pos-rel {
-  position: relative;
-}
-
-.pos-abs {
-  position: absolute;
-}
-
-.width-70 {
-  width: 70%;
-}
-
-
-// move to component file ???
-.potato-centre-2 {
-  transform: scale(2);
-  -webkit-filter: drop-shadow(5px 5px 5px #9c9b9b);
-  filter: drop-shadow(5px 5px 5px #929191);
-}
+@import "./components/components.custom-classes";
+@import "./components/components.potato-shadow";

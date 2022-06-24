@@ -36,7 +36,7 @@
 
     .aspect-list {
       line-height: 1.8;
-      color: rgb(177, 175, 175);
+      color: $midColorText;
       li::marker {
         font-size: 0.5rem;
       }
@@ -48,8 +48,8 @@
 
     .card {
       border: none;
-      border-bottom: solid grey 1px;
-      border-top: solid grey 1px;
+      border-bottom: solid $cardBorder 1px;
+      border-top: solid $cardBorder 1px;
       height: auto;
     }
   }

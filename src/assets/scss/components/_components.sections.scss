@@ -90,12 +90,11 @@
         z-index: 10;
       }
       &.section--2 {
-        @include background(#f1f1f1);
+        @include background($accentColor6);
       }
       &.section--3 {
         @include background($accentColor2);
         background: radial-gradient($accentColor2, $accentGradient2);
-        // overflow: visible;
       }
       &.section--4 {
         @include background($accentColor3);

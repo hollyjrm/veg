@@ -21,7 +21,7 @@
     content: "";
     position: absolute;
     bottom: -110px;
-    color: white;
+    color: $mainText1;
     font-weight: 100;
   }
 
@@ -55,7 +55,7 @@
 }
 
 .indicator {
-  border-left: dashed white 2px;
+  border-left: dashed $mainText1 2px;
   height: 100%;
 
   &:before {
@@ -63,10 +63,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    box-shadow: inset 0 2px 8px 0 rgba(255, 255, 255, 0.397);
+    color: $mainText1;
+    box-shadow: inset 0 2px 8px 0 $shadowInset;
     border-radius: 50%;
-    border: solid white 1px;
+    border: solid $mainText1 1px;
     height: 2em;
     width: 2em;
     position: absolute;
@@ -76,8 +76,8 @@
     content: "";
     position: absolute;
     bottom: -20px;
-    border-top: white solid 1px;
-    color: white;
+    border-top: $mainText1 solid 1px;
+    color: $mainText1;
   }
 
   &.indicator-1 {
@@ -115,7 +115,6 @@
 
     &:after {
       content: "3g";
-
       right: 55px;
     }
   }

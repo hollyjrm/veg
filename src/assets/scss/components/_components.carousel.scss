@@ -4,13 +4,11 @@
   margin: 0 auto;
 
   div {
-    width: 100%;
-    height: 100%;
+    @include widthHeight100;
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    @include widthHeight100;
     object-fit: cover;
   }
 }
@@ -24,7 +22,6 @@
   padding: 0;
   margin: 0;
   list-style: none;
-
   height: 100%;
   transition: transform 250ms ease-in;
 }
@@ -39,7 +36,6 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: transparent;
-  color: grey;
   border: 0;
   cursor: pointer;
 }
@@ -60,7 +56,7 @@
 
   .testimonial-text {
     text-align: center;
-    border-bottom: solid rgb(110, 108, 108) 1px;
+    border-bottom: solid 1px;
     width: 70%;
     font-size: 1.5rem;
     padding-bottom: 2rem;
@@ -75,8 +71,8 @@
       width: 20px;
       height: 20px;
       overflow: hidden;
-      border: solid 1px rgb(103, 101, 101);
-      background-color: white;
+      border: solid 1px $black;
+      background-color: $mainText1;
       border-top-color: transparent;
       border-left-color: transparent;
       transform: rotate(45deg);
