@@ -1,0 +1,112 @@
+.main-content {
+    @include flexCenter(column);
+    margin: 0 auto;
+  
+    .image-wrapper {
+      @include flexCenter(row);
+      z-index: 2;
+      gap: 2em;
+      height: 500px;
+    }
+  
+    .section {
+      min-height: 100vh;
+      width: 100%;
+      overflow: hidden;
+  
+      .content-wrapper {
+        @include flexCenter(column);
+  
+        margin: 0 auto;
+      }
+  
+      .three-potatoes {
+        transform: scale(0.6);
+      }
+  
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 0.75rem;
+      }
+  
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 100;
+        text-align: center;
+        margin-top: 0;
+      }
+  
+      .content-wrapper--2 {
+        h2 {
+          @include subHeaders($darkText);
+        }
+  
+        h3 {
+          @include infoText($darkText);
+        }
+      }
+  
+      .content-wrapper--3 {
+        h2 {
+          @include subHeaders($mainText1);
+        }
+  
+        h3 {
+          @include infoText($mainText1);
+        }
+  
+        .potato-mid-3 {
+          transform: scale(2.5);
+          z-index: 800;
+  
+          @media (max-width: 960px) {
+            transform: scale(1.5);
+          }
+        }
+      }
+  
+      .content-wrapper--4 {
+        h2 {
+          @include subHeaders($darkText2);
+        }
+  
+        h3 {
+          @include infoText($darkText2);
+        }
+      }
+  
+      .content-wrapper--5 {
+        h2 {
+          @include subHeaders($darkText);
+        }
+      }
+  
+      &.section--1 {
+        @include background($accentColor1);
+        color: $mainText1;
+        background: radial-gradient($accentColor1, $accentGradient1);
+        z-index: 10;
+      }
+      &.section--2 {
+        @include background(#f1f1f1);
+      }
+      &.section--3 {
+        @include background($accentColor2);
+        background: radial-gradient($accentColor2, $accentGradient2);
+        // overflow: visible;
+      }
+      &.section--4 {
+        @include background($accentColor3);
+        z-index: 5;
+      }
+      &.section--5 {
+        @include background($accentColor4);
+      }
+      &.section--6 {
+        @include background($accentColor5);
+      }
+    }
+  }
+  

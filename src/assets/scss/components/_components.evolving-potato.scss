@@ -1,0 +1,36 @@
+.evolved-potato-wrapper {
+    @include flexCenter(row);
+    transform: scale(0.4);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    .evolving-potato {
+      justify-self: right;
+      width: 50%;
+    }
+  
+    .pringles {
+      justify-self: left;
+      width: 50%;
+    }
+  
+    .evolving-potato-divider {
+      height: 100%;
+      border-left: solid $darkText2 5px;
+    }
+  }
+  
+  .mash {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 0);
+  }
+  
+  .wedges {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 0) scale(2);
+  }
+  

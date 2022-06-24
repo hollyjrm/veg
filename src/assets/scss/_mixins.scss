@@ -27,10 +27,23 @@
   text-align: center;
 }
 
-
 @mixin nutritionText(){
   position: absolute;
   color: $mainText1;
   font-size: 1.25rem;
   font-weight: 100;
+}
+
+@mixin blurImages($blurNum, $bottom, $left, $top, $right, $zIndex){
+  filter: blur($blurNum);
+  position: absolute;
+  z-index: $zIndex;
+  bottom: $bottom;
+  left: $left;
+  top: $top;
+  right: $right;
+}
+
+@mixin transformBlurImg($skewX, $skewY, $scale, $translateX, $translateY){
+  transform: skew($skewX, $skewY) scale($scale) translate($translateX, $translateY);
 }

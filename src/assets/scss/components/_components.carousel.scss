@@ -1,5 +1,4 @@
 .carousel {
-  position: relative;
   height: 600px;
   width: 70%;
   margin: 0 auto;
@@ -18,7 +17,6 @@
 
 .carousel-track-container {
   height: 100%;
-  position: relative;
   overflow: hidden;
 }
 
@@ -26,20 +24,18 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  position: relative;
+
   height: 100%;
   transition: transform 250ms ease-in;
 }
 
 .carousel-slide {
-  position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
 
 .carousel-button {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: transparent;
@@ -64,28 +60,25 @@
 
   .testimonial-text {
     text-align: center;
-    border-bottom: solid black 1px;
+    border-bottom: solid rgb(110, 108, 108) 1px;
     width: 70%;
     font-size: 1.5rem;
-
     padding-bottom: 2rem;
-    position: relative;
 
     &:after {
       content: "\0020";
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: -11px;
       left: 50%;
-
       z-index: 2;
       width: 20px;
       height: 20px;
       overflow: hidden;
-      // border: solid 15px transparent;
-      // border-top: 0;
-      // border-bottom-color: #e27ec9;
-
+      border: solid 1px rgb(103, 101, 101);
+      background-color: white;
+      border-top-color: transparent;
+      border-left-color: transparent;
       transform: rotate(45deg);
       -webkit-transform: rotate(45deg);
     }
@@ -94,4 +87,51 @@
 
 .is-hidden {
   display: none;
+}
+
+.potato-icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.potato-wrapper-top {
+  flex-direction: column;
+  row-gap: 4rem;
+  
+
+  span {
+    img {
+      margin: 30px;
+    }
+  }
+}
+
+.potato-wrapper-top-2 {
+  flex-direction: column;
+  right: 0;
+  row-gap: 4rem;
+
+  span {
+    img {
+      margin: 10px;
+
+      &:first-child {
+        right: 0px;
+        bottom: 5rem;
+      }
+    }
+  }
+}
+
+.potato-icon-wrapper-bottom {
+  transform: perspective(20vw) rotateY(-10deg);
+  flex-wrap: wrap;
+}
+
+.potato-icon-wrapper-bottom-2 {
+  border-radius: 50%;
+  perspective: 20px;
+  transform: perspective(20vw) rotateY(10deg);
+  flex-wrap: wrap;
 }

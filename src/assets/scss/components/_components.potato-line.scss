@@ -1,0 +1,24 @@
+.potato-line-wrapper {
+    width: 100%;
+    @include flexCenter(row);
+    z-index: 999;
+    justify-content: space-evenly;
+  
+    @media (max-width: 460px) {
+      flex-wrap: wrap;
+    }
+  
+    .potato-line-icon {
+      margin: 0 20px;
+    }
+  
+    .potato-line {
+      width: 20%;
+      border-top: solid rgb(175, 173, 173) 1px;
+    }
+  
+    .potato-line-sm {
+      width: 10%;
+      border-top: solid rgb(175, 173, 173) 1px;
+    }
+  }

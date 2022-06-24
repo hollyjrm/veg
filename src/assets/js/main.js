@@ -12,10 +12,20 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
+const moveToSlide = (track, currentSlide, targetSlide, allSlides = slides) => {
+  
+  
   track.style.transform = "translateX(-" + targetSlide.style.left + ")";
   currentSlide.classList.remove("current-slide");
   targetSlide.classList.add("current-slide");
+  allSlides.map(slide => {
+    if (slide != targetSlide){
+      slide.classList.add("is-hidden");
+    } else {
+      slide.classList.remove("is-hidden");
+    }
+  })
+
 };
 
 const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {

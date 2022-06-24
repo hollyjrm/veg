@@ -8,7 +8,7 @@
                 viewBox="0 0 512 512"
                 style="
                   enable-background: new 0 0 512 512;
-                  fill: rgb(174, 174, 174);
+                  fill: rgba(141,111,50, 0.3);
                   
                   height: 80px;
                   width: 80px;
