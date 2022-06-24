@@ -1,6 +1,6 @@
 .main-content {
     @include flexCenter(column);
-    margin: 0 auto;
+    margin: $marginCenter;
   
     .image-wrapper {
       @include flexCenter(row);
@@ -17,7 +17,7 @@
       .content-wrapper {
         @include flexCenter(column);
   
-        margin: 0 auto;
+        margin: $marginCenter;
       }
   
       .three-potatoes {

@@ -1,7 +1,7 @@
 .carousel {
   height: 600px;
   width: 70%;
-  margin: 0 auto;
+  margin: $marginCenter;
 
   div {
     @include widthHeight100;
