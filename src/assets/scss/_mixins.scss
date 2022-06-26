@@ -5,7 +5,7 @@
   flex-direction: $direction;
 }
 
-@mixin widthHeight100{
+@mixin widthHeight100 {
   width: 100%;
   height: 100%;
 }
@@ -19,7 +19,7 @@
   font-size: 2.5rem;
   font-weight: 100;
   position: relative;
-  z-index: 99;
+  z-index: 4;
   text-align: center;
 }
 
@@ -28,18 +28,18 @@
   font-size: 1.25rem;
   font-weight: 100;
   position: relative;
-  z-index: 99;
+  z-index: 4;
   text-align: center;
 }
 
-@mixin nutritionText(){
+@mixin nutritionText() {
   position: absolute;
   color: $mainText1;
   font-size: 1.25rem;
   font-weight: 100;
 }
 
-@mixin blurImages($blurNum, $bottom, $left, $top, $right, $zIndex){
+@mixin blurImages($blurNum, $bottom, $left, $top, $right, $zIndex) {
   filter: blur($blurNum);
   position: absolute;
   z-index: $zIndex;
@@ -49,6 +49,7 @@
   right: $right;
 }
 
-@mixin transformBlurImg($skewX, $skewY, $scale, $translateX, $translateY){
-  transform: skew($skewX, $skewY) scale($scale) translate($translateX, $translateY);
+@mixin transformBlurImg($skewX, $skewY, $scale, $translateX, $translateY) {
+  transform: skew($skewX, $skewY) scale($scale)
+    translate($translateX, $translateY);
 }

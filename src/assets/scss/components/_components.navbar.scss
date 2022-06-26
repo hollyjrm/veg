@@ -1,6 +1,23 @@
 .primary-nav {
   width: 100%;
-  margin-bottom: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  background-color: $accentColor1;
+  box-shadow: 0 0 10px #5a3e3e;
+
+  .toggle-label {
+    display: none;
+    font-size: 3rem;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ ul .nav-link {
+  display: block;
 }
 
 .nav-links {
@@ -14,7 +31,7 @@
     list-style: none;
     transition: 350ms;
 
-    .logo-wrapper{
+    .logo-wrapper {
       @include flexCenter(row);
     }
     &:hover {
@@ -41,11 +58,31 @@
 }
 
 @media (max-width: 768px) {
+  .primary-nav {
+    .toggle-label {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 1.3rem;
+    }
+  }
+
+  .nav-links {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 2em;
+  }
+
   .nav-link {
     display: none;
 
     &:first-child {
       display: block;
+      margin: 0;
     }
+  }
+  .toggle {
+    display: block;
   }
 }
